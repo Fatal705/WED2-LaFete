@@ -9,7 +9,7 @@
     <h1>Lafete</h1>
     <ul data-ng-controller="EventListController">
         <li data-ng-repeat="event in events">
-            {{event.name}} at {{event.place}} starting {{event.date | date:"dd.MM.yyyy"}}
+            {{event.name}} at {{event.location.name}} {{event.times.begin | date:"dd.MM.yy HH:mm"}}
         </li>
     </ul>
 </div>
