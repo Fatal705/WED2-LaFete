@@ -4,6 +4,7 @@ require.config({
         'frameworks/angular': '../source/frameworks/angular/angular.min',
         'app': '../source/classes',
         'tests': 'classes',
+        'libraries/angularMocks': 'libraries/angular/angularMocks',
         'libraries/jasmine': ['libraries/jasmine/jasmine'],
         'libraries/jasmine-html': ['libraries/jasmine/jasmine-html'],
         'libraries/jasmine-boot': ['libraries/jasmine/boot']
@@ -11,6 +12,10 @@ require.config({
     shim: {
         'frameworks/angular': {
             exports: ['angular']
+        },
+        'libraries/angularMocks': {
+            deps: ['frameworks/angular'],
+            exports: 'angular.mock'
         },
         'libraries/jasmine-html': {
             deps : ['libraries/jasmine']
@@ -23,8 +28,7 @@ require.config({
 
 
 require(['libraries/jasmine-boot'], function () {
-    require(['tests/controllers/EventListControllerTest'], function(){
-        //trigger Jasmine
+    require(['tests/controllers/EventListControllerTest', 'tests/models/EventTest'], function(){
         window.onload();
     });
 });

@@ -5,14 +5,8 @@
     <title>Angular App</title>
 </head>
 <body>
-<div>
     <h1>Lafete</h1>
-    <ul data-ng-controller="EventListController">
-        <li data-ng-repeat="event in events">
-            {{event.name}} at {{event.location.name}} {{event.times.begin | date:"dd.MM.yy HH:mm"}}
-        </li>
-    </ul>
-</div>
+<div data-ng-view></div>
 <script src="./libraries/require/require-js.min.js" data-main="./classes/main.js"></script>
 </body>
 </html>
