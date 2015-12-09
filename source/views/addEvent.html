@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Event</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Add Event</h1>
+		<form role="form">
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" class="form-control" id="name" placeholder="Enter event name">
+			</div>
+			<div class="form-group">
+				<label for="description">Description:</label>
+				<input type="text" class="form-control" id="description" placeholder="Enter description">
+			</div>
+			<div class="form-group">
+				<label for="targetGroup">Target Group:</label>
+				<input type="text" class="form-control" id="targetGroup" placeholder="Enter target group">
+			</div>
+			<div class="form-group">
+				<label for="contributionDescription">Contribution description:</label>
+				<input type="text" class="form-control" id="contributionDescription" placeholder="Enter contribution description">
+			</div>
+			<div>
+				<label for="location">Location:</label>
+				<div>
+					<input type="text" class="form-control" id="locationName" placeholder="Enter location name">
+					<input type="text" class="form-control" id="street" placeholder="Enter street">
+					<input type="text" class="form-control" id="zipCode" placeholder="Enter zipCode">
+					<input type="text" class="form-control" id="city" placeholder="Enter city">
+				</div>
+			</div>
+			<div>
+				<label for="beginDateTime">Begin:</label>
+				<input type="datetime" class="form-control" id="beginDateTime" placeholder="Enter date and time">
+			</div>
+			<div>
+				<label for="endDateTime">End:</label>
+				<input type="datetime" class="form-control" id="endDateTime" placeholder="Enter date and time">
+			</div>
+			<div class="form-group">
+				<label for="maxGuests">Maximal amount of Guests:</label>
+				<input type="number" class="form-control" min="0" id="maxGuests" placeholder="Enter maximal amount of Guests">
+			</div>
+			<button type="submit" class="btn btn-default">Add Event</button>
+			<button type="submit" class="btn btn-default">Edit Event</button>
+		</form>
+	</div>
+</body>
+</html>
