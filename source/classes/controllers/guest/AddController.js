@@ -15,13 +15,18 @@ define(['app/models/Guest'], function(Guest) {
 
         this.scope.add = function(newGuest, edit) {
             if(edit){
-                GuestRepository.updateForEvent(newGuest, {id:$routeParams.eventId});
+                GuestRepository.updateForEvent(newGuest, {id:$routeParams.eventId},
+                   function(event) {
+                       $location.path('/events/'+event.id+'/guests');
+                   }
+                );
+            }else{
+                GuestRepository.addForEvent(newGuest, {id:$routeParams.eventId},
+                    function(event) {
+                        $location.path('/events/'+event.id);
+                    }
+                );
             }
-            GuestRepository.addForEvent(newGuest, {id:$routeParams.eventId},
-                function(event) {
-                    $location.path('/events/'+event.id);
-                }
-            );
         };
     };
 
