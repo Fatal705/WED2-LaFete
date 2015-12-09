@@ -1,4 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Event</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
 
+<body>
 	<div class="container">
 		<h1>Add Event</h1>
 		<form role="form">
@@ -18,7 +27,7 @@
 				<label for="contributionDescription">Contribution description:</label>
 				<input type="text" class="form-control" id="contributionDescription" placeholder="Enter contribution description" data-ng-model="event.contributionsDescription">
 			</div>
-			<div>
+			<div class="form-group">
 				<label for="location">Location:</label>
 				<div>
 					<input type="text" class="form-control" id="locationName" placeholder="Enter location name" data-ng-model="event.location.name">
@@ -27,19 +36,50 @@
 					<input type="text" class="form-control" id="city" placeholder="Enter city" data-ng-model="event.location.city">
 				</div>
 			</div>
-			<div>
-				<label for="beginDateTime">Begin:</label>
-				<input type="datetime" class="form-control" id="beginDateTime" placeholder="Enter date and time">
+			<div class="row">
+				<label class="col-md-2" for="beginDate">Begin:</label>
+				<div class="col-md-2">
+					<input type="number" value="" class="form-control" id="beginYear" placeholder="Enter year">
+				</div>
+				<div class="col-md-2">				
+					<input type="number" class="form-control" id="beginMonth" placeholder="Enter month">
+				</div>
+				<div class="col-md-2">
+					<input type="number" class="form-control" id="beginDay" placeholder="Enter day">
+				</div>
+				<div class="col-md-2">
+					<input type="number" class="form-control" id="beginHour" placeholder="Enter hour">
+				</div>
+				<div class="col-md-2">
+					<input type="number" class="form-control" id="beginMinute" placeholder="Enter minutes">
+				</div>
 			</div>
-			<div>
-				<label for="endDateTime">End:</label>
-				<input type="datetime" class="form-control" id="endDateTime" placeholder="Enter date and time">
+			<div class="row">
+				<label class="col-md-2" for="endDate">End:</label>
+				<div class="col-md-2">
+					<input type="number" class="form-control" id="endYear" placeholder="Enter year">
+				</div>
+				<div class="col-md-2">				
+					<input type="number" class="form-control" id="endMonth" placeholder="Enter month">
+				</div>
+				<div class="col-md-2">
+					<input type="number" class="form-control" id="endDay" placeholder="Enter day">
+				</div>
+				<div class="col-md-2">
+					<input type="number" class="form-control" id="endHour" placeholder="Enter hour">
+				</div>
+				<div class="col-md-2">
+					<input type="number" class="form-control" id="endMinute" placeholder="Enter minutes">
+				</div>
 			</div>
 			<div class="form-group">
 				<label for="maxGuests">Maximal amount of Guests:</label>
 				<input type="number" class="form-control" min="0" id="maxGuests" placeholder="Enter maximal amount of Guests" data-ng-model="event.maximalAmoutOfGuests">
 			</div>
 			<button type="submit"  data-ng-click="add(event)"  class="btn btn-default">Add Event</button>
+			<a href="#/events" role="button" class="btn btn-default">Add Event</a>
 
 		</form>
 	</div>
+</body>
+</html>
