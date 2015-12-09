@@ -9,7 +9,7 @@ define(['app/models/Event'], function(Event) {
             newEvent.times.begin = new Date(
                 newEvent.times.begin.date.year,
                 newEvent.times.begin.date.month,
-                newEvent.times.begin.date.date,
+                newEvent.times.begin.date.day,
                 newEvent.times.begin.time.hours,
                 newEvent.times.begin.time.minutes,
                 0
@@ -17,7 +17,7 @@ define(['app/models/Event'], function(Event) {
             newEvent.times.end = new Date(
                 newEvent.times.end.date.year,
                 newEvent.times.end.date.month,
-                newEvent.times.end.date.date,
+                newEvent.times.end.date.day,
                 newEvent.times.end.time.hours,
                 newEvent.times.end.time.minutes,
                 0
