@@ -1,4 +1,4 @@
-define(['app/models/GuestRepository'], function(GuestRepository) {
+define(['app/models/Guest'], function(Guest) {
     'use strict';
     var GuestListController = function($scope, $routeParams, GuestRepository) {
         this.scope = $scope;
