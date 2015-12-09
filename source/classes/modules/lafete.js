@@ -1,4 +1,4 @@
-define(['frameworks/angular', 'app/controllers/guest/ListController',  'app/controllers/event/ListController', 'app/controllers/event/DetailController', 'app/controllers/guest/AddController', 'app/controllers/event/AddController', 'app/services/EventRepository', 'app/services/GuestRepository', 'libraries/angularRoute'], 
+define(['frameworks/angular', 'app/controllers/guest/ListController',  'app/controllers/event/ListController', 'app/controllers/event/DetailController', 'app/controllers/guest/AddController', 'app/controllers/event/AddController', 'app/repositories/EventRepository', 'app/repositories/GuestRepository', 'libraries/angularRoute'], 
        function (Angular, GuestListController, EventListController, EventDetailController, GuestAddController, EventAddController, EventRepository, GuestRepository) {
     'use strict';
     
