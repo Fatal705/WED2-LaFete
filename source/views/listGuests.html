@@ -1,30 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="uft-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
- 	<title>Guests</title>
-</head>
-
-<body>
-	<div class="container">
-		<h1>Guests</h1>
-		<button type="submit" class="btn btn-default">Add Guest</button>
-		<div class="list-group">
-			<a href="#" class="list-group-item active">
-			<h4 class="list-group-item-heading">First Guest</h4>
-				<p class="list-group-item-text">List Group Item Text</p>
-			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Second Guest</h4>
-				<p class="list-group-item-text">List Group Item Text</p>
-			</a>
-			<a href="#" class="list-group-item">
-				<h4 class="list-group-item-heading">Third Guest</h4>
-				<p class="list-group-item-text">List Group Item Text</p>
-			</a>
-		</div>
+<div class="container">
+	<h1>Guests</h1>
+	<button type="submit" href="#/events/{{event.id}}/add" class="btn btn-default">Add Guest</button>
+	<div class="list-group">
+		<a data-ng-href="#" data-ng-repeat="guest in guests" class="list-group-item">
+		<h4 class="list-group-item-heading">{{guest.name}}</h4>
+			<p class="list-group-item-text">{{guest.contribution}}, {{guest.comment}}, {{guest.canceled}}</p>
+		</a>
 	</div>
-</body>
-</html>
+</div>
+
