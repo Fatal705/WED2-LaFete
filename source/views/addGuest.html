@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Guest</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+
+<body>
 <div class="container">
 	<h1>Add Guest</h1>
 	<form role="form">
@@ -13,7 +23,13 @@
 			<label for="comment">Comment:</label>
 			<textarea class="form-control" rows="3" id="comment" placeholder="Enter comment" data-ng-model="guest.comment" required ></textarea>
 		</div>
+		<div class="checkbox">
+  			<<label for=""></label>
+  			<input type="checkbox" value="">Option 1</label>
+		</div>
 		<button type="submit" data-ng-click="add(guest)" class="btn btn-default">Add Guest</button>
+		<a href="#/events" role="button" class="btn btn-default">Back</a>
 	</form>
 </div>
-
+</body>
+</html>
