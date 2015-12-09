@@ -25,7 +25,7 @@ define(['app/models/Event'], function(Event) {
                 });
         };  
         this.add = function(event, successCallback) {
-            $http.post(this.urls.add)
+            $http.post(this.urls.add, event)
                 .success(function(eventDTO) {
                     successCallback(Event.createFromDTO(eventDTO));
                 });

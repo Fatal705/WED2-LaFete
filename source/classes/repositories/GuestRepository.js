@@ -17,7 +17,7 @@ define(['app/models/Guest'], function(Guest) {
                 });
         };
         this.addForEvent = function(guest, event, successCallback) {
-            $http.post(this.urls.forEvent.replace('{eventId}', event.id))
+            $http.post(this.urls.forEvent.replace('{eventId}', event.id), guest)
                 .success(function(guestDTO) {
                     successCallback(event);
                 });
@@ -30,7 +30,7 @@ define(['app/models/Guest'], function(Guest) {
                 });
         };
         this.updateForEvent = function(guest, event, successCallback) {
-            $http.post(this.urls.byId.replace('{eventId}', event.id).replace('{guestId}', guest.id))
+            $http.post(this.urls.byId.replace('{eventId}', event.id).replace('{guestId}', guest.id), guest)
                 .success(function(guestDTO) {
                     successCallback(event);
                 });
