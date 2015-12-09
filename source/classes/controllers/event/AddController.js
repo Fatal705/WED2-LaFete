@@ -1,4 +1,4 @@
-define(['app/models/EventRepository'], function(EventRepository) {
+define(['app/models/Event'], function(Event) {
     'use strict';
     var EventAddController = function($scope, $location, EventRepository) {
 
