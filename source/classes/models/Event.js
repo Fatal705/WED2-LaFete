@@ -1,8 +1,8 @@
 define(['app/services/UuidService'], function(UuidService) {
 	'use strict';
 
-	var Event = function(name, description, targetGroup, contributionsDescription, location, times, maximalAmoutOfGuests) {
-		this.id = UuidService.getRandomUuid();
+	var Event = function(name, description, targetGroup, contributionsDescription, location, times, maximalAmoutOfGuests, id) {
+		this.id = id || UuidService.getRandomUuid();
 		this.name = name;
 		this.description = description;
 		this.targetGroup = targetGroup;
@@ -28,6 +28,19 @@ define(['app/services/UuidService'], function(UuidService) {
 				this.times.end = end;
 			}
 		});
+	};
+
+	Event.createFromDTO = function(jsonData) {
+		return new Event(
+			jsonData.name,
+			jsonData.description,
+			jsonData.targetGroup,
+			jsonData.eventGift,
+			jsonData.location,
+			jsonData.times,
+			jsonData.maximalAmoutOfGuests,
+			jsonData.id
+		);
 	};
 
 	return Event;

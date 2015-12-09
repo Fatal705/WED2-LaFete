@@ -1,8 +1,11 @@
-define(['app/models/event'], function(Event) {
+define(['app/models/EventRepository'], function(EventRepository) {
     'use strict';
-    var EventListController = function($scope, storageService){
+    var EventListController = function($scope, EventRepository) {
         this.scope = $scope;
-        this.scope.events = storageService.events;
+        EventRepository.all(
+            function(events) {
+                this.scope.events = events;
+            }.bind(this));
     };
     return EventListController;
 });
