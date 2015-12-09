@@ -10,8 +10,7 @@ define(['app/models/Guest'], function(Guest) {
                 function(guest) {
                     this.scope.guest = guest;
                     this.scope.edit = true;
-                }
-            );
+                }.bind(this));
         }
 
         this.scope.add = function(newGuest, edit) {
