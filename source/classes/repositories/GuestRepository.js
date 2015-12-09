@@ -6,7 +6,7 @@ define(['app/models/Guest'], function(Guest) {
             forEvent: '/api/events/{eventId}/guests',
         };
 
-        this.getForEvent = function(successCallback) {
+        this.getForEvent = function(event, successCallback) {
             $http.get(this.urls.forEvent.replace('{eventId}', event.id))
                 .success(function(data) {
                     var guests = data.guests.map(function(guestDTO) {
