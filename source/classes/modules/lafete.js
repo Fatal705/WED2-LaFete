@@ -9,21 +9,21 @@ define(['frameworks/angular', 'app/controllers/guest/ListController',  'app/cont
             controller: 'EventListController',
             templateUrl: '/views/listEvents.html'
         })
-        .when('/events/:eventId', {
-            controller: 'EventDetailController',
-            templateUrl: '/views/eventDetail.html'
+        .when('/events/add', {
+            controller: 'EventAddController',
+            templateUrl: '/views/addEvent.html'
         })
         .when('/events/:eventId/guests', {
             controller: 'GuestListController',
             templateUrl: '/views/listGuests.html'
         })
-        .when('/events/add', {
-            controller: 'EventAddController',
-            templateUrl: '/views/addEvent.html'
-        })
         .when('/events/:eventId/add', {
             controller: 'GuestAddController',
             templateUrl: '/views/addGuest.html'
+        })
+        .when('/events/:eventId', {
+            controller: 'EventDetailController',
+            templateUrl: '/views/eventDetail.html'
         })
         .otherwise({
             redirectTo: '/events'
