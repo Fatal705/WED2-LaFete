@@ -29,7 +29,7 @@ define(['app/models/Guest'], function(Guest) {
                     successCallback(guest);
                 });
         };
-        this.addForEvent = function(guest, event, successCallback) {
+        this.updateForEvent = function(guest, event, successCallback) {
             $http.post(this.urls.byId.replace('{eventId}', event.id).replace('{guestId}', guest.id))
                 .success(function(guestDTO) {
                     successCallback(event);
