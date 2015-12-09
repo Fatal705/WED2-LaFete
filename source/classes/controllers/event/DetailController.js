@@ -7,9 +7,7 @@ define([], function() {
             { id:$routeParams.eventId }, 
             function(event) {
                 this.scope.event = event;   
-            }.bind(this), 
-            function() {}
-        );
+            }.bind(this));
     };
 
     return EventDetailController;
