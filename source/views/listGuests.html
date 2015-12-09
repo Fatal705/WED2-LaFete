@@ -1,13 +1,24 @@
-<div class="container">
-	<h1>Guests</h1>
-	<a href="#/events/{{event.id}}/add" role="button" class="btn btn-default">Add Guest</a>
-	<div class="list-group">
-		<a data-ng-href="#" data-ng-repeat="guest in guests" class="list-group-item">
-		<h4 class="list-group-item-heading">{{guest.name}}</h4>
-			<p class="list-group-item-text">{{guest.contribution}}, {{guest.comment}}, {{guest.canceled}}</p>
-		<a href="#/events/{{event.id}}/guests/{{guest.id}}">Edit</a>
-		</a>
-	</div>
-	<a href="#/events/{{event.id}}">Back</a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Add Event</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
 
+<body>
+	<div class="container">
+		<h1>Guests</h1>
+		<a href="#/events/{{event.id}}/add" role="button" class="btn btn-default">Add Guest</a>
+		<div class="list-group">
+			<a data-ng-href="#/events/{{event.id}}/guests/{{guest.id}}" data-ng-repeat="guest in guests" class="list-group-item">
+			<h4 class="list-group-item-heading">{{guest.name}}</h4>
+				<p class="list-group-item-text" >{{guest.contribution}}, {{guest.comment}}, {{guest.canceled}}
+				</p>
+			</a>
+		</div>
+		<a href="#/events/{{event.id}}">Back</a>
+	</div>
+</body>
+</html>
