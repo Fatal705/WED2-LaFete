@@ -15,7 +15,7 @@ define(['frameworks/angular', 'app/controllers/guest/ListController',  'app/cont
         })
         .when('/events/:eventId/guests/:guestId', {
             controller: 'GuestAddController',
-            templateUrl: '/views/listGuests.html'
+            templateUrl: '/views/addGuest.html'
         })
         .when('/events/:eventId/guests', {
             controller: 'GuestListController',
