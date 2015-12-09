@@ -7,17 +7,17 @@ define(['app/models/Event'], function(Event) {
 
         this.scope.add = function(newEvent) {
             newEvent.times.begin = new Date(
-                newEvent.times.begin.date.getFullYear(),
-                newEvent.times.begin.date.getMonth(),
-                newEvent.times.begin.date.getDate(),
+                newEvent.times.begin.date.year,
+                newEvent.times.begin.date.month,
+                newEvent.times.begin.date.date,
                 newEvent.times.begin.time.hours,
                 newEvent.times.begin.time.minutes,
                 0
             );
             newEvent.times.end = new Date(
-                newEvent.times.end.date.getFullYear(),
-                newEvent.times.end.date.getMonth(),
-                newEvent.times.end.date.getDate(),
+                newEvent.times.end.date.year,
+                newEvent.times.end.date.month,
+                newEvent.times.end.date.date,
                 newEvent.times.end.time.hours,
                 newEvent.times.end.time.minutes,
                 0

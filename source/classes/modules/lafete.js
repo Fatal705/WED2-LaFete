@@ -13,6 +13,10 @@ define(['frameworks/angular', 'app/controllers/guest/ListController',  'app/cont
             controller: 'EventAddController',
             templateUrl: '/views/addEvent.html'
         })
+        .when('/events/:eventId/guests/:guestId', {
+            controller: 'GuestAddController',
+            templateUrl: '/views/listGuests.html'
+        })
         .when('/events/:eventId/guests', {
             controller: 'GuestListController',
             templateUrl: '/views/listGuests.html'

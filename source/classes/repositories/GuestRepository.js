@@ -4,6 +4,7 @@ define(['app/models/Guest'], function(Guest) {
     var GuestRepository = function($http) {
         this.urls = {
             forEvent: '/api/events/{eventId}/guests',
+            byId: '/api/events/{eventId}/guests/{guestId}',
         };
 
         this.getForEvent = function(event, successCallback) {
@@ -21,7 +22,19 @@ define(['app/models/Guest'], function(Guest) {
                     successCallback(event);
                 });
         };        
-  
+        this.getById = function(event, guest, successCallback) {
+            $http.get(this.urls.byId.replace('{eventId}', event.id).replace('{guestId}', guest.id))
+                .success(function(data) {
+                    var guest = Guest.createFromDTO(data);
+                    successCallback(guest);
+                });
+        };
+        this.addForEvent = function(guest, event, successCallback) {
+            $http.post(this.urls.byId.replace('{eventId}', event.id).replace('{guestId}', guest.id))
+                .success(function(guestDTO) {
+                    successCallback(event);
+                });
+        }; 
     };
 
     return GuestRepository;
