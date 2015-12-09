@@ -1,7 +1,7 @@
 define(['app/models/Guest'], function(Guest) {
     'use strict';
     
-    var GuestAddController = function($scope, $routeParams, $location, EventRepository) {
+    var GuestAddController = function($scope, $routeParams, $location, GuestRepository) {
 
         this.scope = $scope;
         this.scope.guest = new Guest();

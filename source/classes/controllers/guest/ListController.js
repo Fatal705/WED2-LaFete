@@ -3,7 +3,7 @@ define(['app/models/Guest'], function(Guest) {
     var GuestListController = function($scope, $routeParams, GuestRepository) {
         this.scope = $scope;
         this.scope.event = { id:$routeParams.eventId };
-        GuestRepository.forEvent({ id:$routeParams.eventId },
+        GuestRepository.getForEvent({ id:$routeParams.eventId },
             function(guests) {
                 this.scope.guests = guests;
             }.bind(this));
