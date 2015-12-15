@@ -36,7 +36,7 @@ define(['app/services/UuidService'], function(UuidService) {
 			jsonData.name,
 			jsonData.description,
 			jsonData.targetGroup,
-			jsonData.eventGift,
+			jsonData.contributionsDescription,
 			jsonData.location,
 			jsonData.times,
 			jsonData.maximalAmoutOfGuests,

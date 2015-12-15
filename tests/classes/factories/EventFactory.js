@@ -3,7 +3,7 @@ define(['app/models/Event'], function (Event) {
 
     var EventFactory = {
         createEvent: function() {
-            return new Event('Meeting', '', 'everyone', 'nothing',
+            return new Event('Meeting', 'Description', 'everyone', 'nothing',
                 {
                     name: 'Hotel',
                     street: 'somewhere',
@@ -14,7 +14,9 @@ define(['app/models/Event'], function (Event) {
                     begin: new Date('2015-10-10T12:00:00.000Z'),
                     end: new Date('2015-10-10T13:00:00.000Z')
                 },
-                12
+                12,
+                {},
+                null
             );
         }
     };

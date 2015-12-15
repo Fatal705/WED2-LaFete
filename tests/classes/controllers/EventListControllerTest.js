@@ -1,19 +1,31 @@
-define(['app/controllers/event/ListController', 'libraries/angularMocks', 'app/services/StorageService'], 
-    function (EventListController, AngularMocks, StorageService ) {
+define(['app/controllers/event/ListController', 'frameworks/angular', 'libraries/angularMocks'], 
+    function (EventListController, Angular, AngularMocks) {
     'use strict';
 
-    var eventListController;
+    var EventRepository, scope;
 
-    beforeEach(AngularMocks.inject(function ($rootScope) {
-        var scope = $rootScope.$new();
-        var storageService = new StorageService();
-        eventListController = new EventListController(scope, storageService);
+    beforeEach(AngularMocks.inject(function ($injector) {
+        scope = $injector.get('$rootScope').$new();
+
+        var events = [{id: 1, name: 'Meeting'},{id: 2, name: 'Party'}];
+
+        // Mocking repository 
+        EventRepository = {
+            all: function(successCallback) {
+                successCallback(events);
+            }
+        };
     }));     
 
     describe('EventListController', function() {
         describe('property scope', function() {
-            it('contains 3 events', function() {
-                expect(3).toBe(eventListController.scope.events.length);
+            it('contains 2 events', function() {
+                var controller = new EventListController(scope, EventRepository);
+                expect(controller.scope.events.length).toBe(2);
+            });
+            it('contains 2 events', function() {
+                var controller = new EventListController(scope, EventRepository);
+                expect(controller.scope.events[0].id).toBe(1);
             });
         });
     });
