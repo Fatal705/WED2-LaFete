@@ -12,28 +12,35 @@
 	<h1>Event detail</h1>
 		<div class="row">
 			<div class="col-md-12">Name : {{event.name}}</div>
-		</div>			
+		</div>
+		<br />
 		<div class="row">
 			<div class="col-md-12">Description: {{event.description}}</div>
 		</div>
+		<br />
 		<div class="row">
 			<div class="col-md-12">Time: {{event.begin | date:"dd.MM.yy HH:mm"}} - {{event.end | date:"dd.MM.yy HH:mm"}}</div>
 		</div>
+		<br />
 		<div class="row">
 			<div class="col-md-12">Target Group: {{event.targetGroup}}</div>
 		</div>
+		<br />
 		<div class="row">
 			<div class="col-md-12">Contribution description: {{event.contributionsDescription}}</div>
 		</div>
+		<br />
 		<div class="row">
 			<div class="col-md-12">Location:
 					<i>{{event.location.name}}</i><br />
 					{{event.location.street}}<br />
 					{{event.location.plz}} {{event.location.city}}</div>
 		</div>
+		<br />
 		<div class="row">
 			<div class="col-md-12">Guests: {{ event.guests.length }}</div>
 		</div>
+		<br />
 		<a href="#/events/{{event.id}}/add" role="button" class="btn btn-default">Add Guest</a>
 		<a href="#/events/{{event.id}}/guests" role="button" class="btn btn-default">Show Guests</a>
 		<a href="#/events" role="button" class="btn btn-default">Back</a>
