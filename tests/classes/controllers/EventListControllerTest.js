@@ -1,5 +1,5 @@
 define(['app/controllers/event/ListController', 'libraries/angularMocks', 'frameworks/angular'], 
-    function (EventListController, AngularMocks, Angular ) {
+    function (EventListController, AngularMocks, Angular) {
     'use strict';
 
     var EventRepository, scope;
