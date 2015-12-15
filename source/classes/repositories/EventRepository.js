@@ -1,4 +1,4 @@
-getdefine(['app/models/Event'], function(Event) {
+define(['app/models/Event'], function(Event) {
     'use strict';
 
     var EventRepository = function($http) {

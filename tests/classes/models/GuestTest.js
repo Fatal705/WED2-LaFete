@@ -1,5 +1,5 @@
-define(['tests/factories/guestFactory','app/model/guest'],
-    function(GuestFactory, Guest) {
+define(['app/models/guest'],
+    function(Guest) {
     'use strict';
 
     describe('Guest', function() {
