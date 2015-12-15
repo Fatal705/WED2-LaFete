@@ -1,4 +1,4 @@
-define(['tests/factories/EventFactory', 'app/model/Event', 'app/repositories/EventRepository', 'libraries/angularMocks'],
+define(['tests/factories/EventFactory', 'app/models/Event', 'app/repositories/EventRepository', 'libraries/angularMocks'],
     function (EventFactory, Event, EventRepository, AngularMocks) {
     'use strict';
 
