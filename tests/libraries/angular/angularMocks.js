@@ -1,5 +1,5 @@
 /**
- * @license AngularJS v1.4.7
+ * @license AngularJS v1.4.8
  * (c) 2010-2015 Google, Inc. http://angularjs.org
  * License: MIT
  */
@@ -929,7 +929,7 @@ angular.mock.dump = function(object) {
  * development please see {@link ngMockE2E.$httpBackend e2e $httpBackend mock}.
  *
  * During unit testing, we want our unit tests to run quickly and have no external dependencies so
- * we don’t want to send [XHR](https://developer.mozilla.org/en/xmlhttprequest) or
+ * we donâ€™t want to send [XHR](https://developer.mozilla.org/en/xmlhttprequest) or
  * [JSONP](http://en.wikipedia.org/wiki/JSONP) requests to a real server. All we really need is
  * to verify whether a certain request has been sent or not, or alternatively just let the
  * application make requests, respond with pre-trained responses and assert that the end result is
@@ -1105,7 +1105,7 @@ angular.mock.dump = function(object) {
          var controller = createController();
          $httpBackend.flush();
 
-         // now you don’t care about the authentication, but
+         // now you donâ€™t care about the authentication, but
          // the controller will still send the request and
          // $httpBackend will respond without you having to
          // specify the expectation and response for this request
@@ -1262,10 +1262,10 @@ function createHttpBackendMock($rootScope, $timeout, $delegate, $browser) {
    *   request is handled. You can save this object for later use and invoke `respond` again in
    *   order to change how a matched request is handled.
    *
-   *  - respond –
+   *  - respond â€“
    *      `{function([status,] data[, headers, statusText])
    *      | function(function(method, url, data, headers)}`
-   *    – The respond method takes a set of static data to be returned or a function that can
+   *    â€“ The respond method takes a set of static data to be returned or a function that can
    *    return an array containing response status (number), response data (string), response
    *    headers (Object), and the text for the status (string). The respond method returns the
    *    `requestHandler` object for possible overrides.
@@ -1399,10 +1399,10 @@ function createHttpBackendMock($rootScope, $timeout, $delegate, $browser) {
    *  request is handled. You can save this object for later use and invoke `respond` again in
    *  order to change how a matched request is handled.
    *
-   *  - respond –
+   *  - respond â€“
    *    `{function([status,] data[, headers, statusText])
    *    | function(function(method, url, data, headers)}`
-   *    – The respond method takes a set of static data to be returned or a function that can
+   *    â€“ The respond method takes a set of static data to be returned or a function that can
    *    return an array containing response status (number), response data (string), response
    *    headers (Object), and the text for the status (string). The respond method returns the
    *    `requestHandler` object for possible overrides.
@@ -1997,13 +1997,13 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  *   control how a matched request is handled. You can save this object for later use and invoke
  *   `respond` or `passThrough` again in order to change how a matched request is handled.
  *
- *  - respond –
+ *  - respond â€“
  *    `{function([status,] data[, headers, statusText])
  *    | function(function(method, url, data, headers)}`
- *    – The respond method takes a set of static data to be returned or a function that can return
+ *    â€“ The respond method takes a set of static data to be returned or a function that can return
  *    an array containing response status (number), response data (string), response headers
  *    (Object), and the text for the status (string).
- *  - passThrough – `{function()}` – Any request matching a backend definition with
+ *  - passThrough â€“ `{function()}` â€“ Any request matching a backend definition with
  *    `passThrough` handler will be passed through to the real backend (an XHR request will be made
  *    to the server.)
  *  - Both methods return the `requestHandler` object for possible overrides.
@@ -2278,8 +2278,9 @@ if (window.jasmine || window.mocha) {
    * @param {...(string|Function|Object)} fns any number of modules which are represented as string
    *        aliases or as anonymous module initialization functions. The modules are used to
    *        configure the injector. The 'ng' and 'ngMock' modules are automatically loaded. If an
-   *        object literal is passed they will be registered as values in the module, the key being
-   *        the module name and the value being what is returned.
+   *        object literal is passed each key-value pair will be registered on the module via
+   *        {@link auto.$provide $provide}.value, the key being the string name (or token) to associate
+   *        with the value on the injector.
    */
   window.module = angular.mock.module = function() {
     var moduleFns = Array.prototype.slice.call(arguments, 0);

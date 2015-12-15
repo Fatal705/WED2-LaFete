@@ -1,10 +1,10 @@
-define(['app/controllers/event/ListController', 'libraries/angularMocks', 'frameworks/angular'], 
-    function (EventListController, AngularMocks, Angular) {
+define(['app/controllers/event/ListController', 'frameworks/angular', 'libraries/angularMocks'], 
+    function (EventListController, Angular, AngularMocks) {
     'use strict';
 
     var EventRepository, scope;
 
-    beforeEach(AngularMocks.inject(function ($rootScope) {
+    beforeEach(AngularMocks.inject(function ($injector) {
         scope = $injector.get('$rootScope').$new();
 
         var events = [{id: 1, name: 'Meeting'},{id: 2, name: 'Party'}];
