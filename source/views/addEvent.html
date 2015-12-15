@@ -13,72 +13,73 @@
 		<form role="form">
 			<div class="form-group">
 				<label for="name">Name:</label>
-				<input type="text" class="form-control" id="name" placeholder="Enter event name" data-ng-model="event.name">
+				<input type="text" class="form-control" id="name" placeholder="Enter event name" data-ng-model="event.name" required />
 			</div>
 			<div class="form-group">
 				<label for="description">Description:</label>
-				<input type="text" class="form-control" id="description" placeholder="Enter description" data-ng-model="event.description">
+				<input type="text" class="form-control" id="description" placeholder="Enter description" data-ng-model="event.description" required />
 			</div>
 			<div class="form-group">
 				<label for="targetGroup">Target Group:</label>
-				<input type="text" class="form-control" id="targetGroup" placeholder="Enter target group" data-ng-model="event.targetGroup">
+				<input type="text" class="form-control" id="targetGroup" placeholder="Enter target group" data-ng-model="event.targetGroup" required />
 			</div>
 			<div class="form-group">
 				<label for="contributionDescription">Contribution description:</label>
-				<input type="text" class="form-control" id="contributionDescription" placeholder="Enter contribution description" data-ng-model="event.contributionsDescription">
+				<input type="text" class="form-control" id="contributionDescription" placeholder="Enter contribution description" data-ng-model="event.contributionsDescription" required />
 			</div>
 			<div class="form-group">
 				<label for="location">Location:</label>
 				<div>
-					<input type="text" class="form-control" id="locationName" placeholder="Enter location name" data-ng-model="event.location.name">
-					<input type="text" class="form-control" id="street" placeholder="Enter street" data-ng-model="event.location.street">
-					<input type="text" class="form-control" id="zipCode" placeholder="Enter zipCode" data-ng-model="event.location.plz">
-					<input type="text" class="form-control" id="city" placeholder="Enter city" data-ng-model="event.location.city">
+					<input type="text" class="form-control" id="locationName" placeholder="Enter location name" data-ng-model="event.location.name" required />
+					<input type="text" class="form-control" id="street" placeholder="Enter street" data-ng-model="event.location.street" required />
+					<input type="text" class="form-control" id="zipCode" placeholder="Enter zipCode" data-ng-model="event.location.plz" required />
+					<input type="text" class="form-control" id="city" placeholder="Enter city" data-ng-model="event.location.city" required />
 				</div>
 			</div>
 			<div class="row">
 				<label class="col-md-2" for="beginDate">Begin:</label>
 				<div class="col-md-2">
-					<input type="number" min="2015" class="form-control" id="beginYear" placeholder="Enter year" data-ng-model="event.times.begin.date.year">
+					<input type="number" min="2015" class="form-control" id="beginYear" placeholder="Enter year" data-ng-model="event.times.begin.date.year" required />
 				</div>
 				<div class="col-md-2">				
-					<input type="number" min="1" max="12" class="form-control" id="beginMonth" placeholder="Enter month" data-ng-model="event.times.begin.date.month">
+					<input type="number" min="1" max="12" class="form-control" id="beginMonth" placeholder="Enter month" data-ng-model="event.times.begin.date.month" required />
 				</div>
 				<div class="col-md-2">
-					<input type="number" min="1" max="31" class="form-control" id="beginDay" placeholder="Enter day" data-ng-model="event.times.begin.date.day">
+					<input type="number" min="1" max="31" class="form-control" id="beginDay" placeholder="Enter day" data-ng-model="event.times.begin.date.day" required />
 				</div>
 				<div class="col-md-2">
-					<input type="number" min="0" max="23" class="form-control" id="beginHours" placeholder="Enter hours" data-ng-model="event.times.begin.time.hours">
+					<input type="number" min="0" max="23" class="form-control" id="beginHours" placeholder="Enter hours" data-ng-model="event.times.begin.time.hours" required />
 				</div>
 				<div class="col-md-2">
-					<input type="number" min="0" max="59" step="5" class="form-control" id="beginMinutes" placeholder="Enter minutes" data-ng-model="event.times.begin.time.minutes">
+					<input type="number" min="0" max="59" step="5" class="form-control" id="beginMinutes" placeholder="Enter minutes" data-ng-model="event.times.begin.time.minutes" required />
 				</div>
 			</div>
 			<div class="row">
 				<label class="col-md-2" for="endDate">End:</label>
 				<div class="col-md-2">
-					<input type="number" min="2015" class="form-control" id="endYear" placeholder="Enter year" data-ng-model="event.times.end.date.year">
+					<input type="number" min="2015" class="form-control" id="endYear" placeholder="Enter year" data-ng-model="event.times.end.date.year" />
 				</div>
 				<div class="col-md-2">				
-					<input type="number" min="1" max="12" class="form-control" id="endMonth" placeholder="Enter month" data-ng-model="event.times.end.date.month">
+					<input type="number" min="1" max="12" class="form-control" id="endMonth" placeholder="Enter month" data-ng-model="event.times.end.date.month" />
 				</div>
 				<div class="col-md-2">
-					<input type="number" min="1" max="31" class="form-control" id="endDay" placeholder="Enter day" data-ng-model="event.times.end.date.day">
+					<input type="number" min="1" max="31" class="form-control" id="endDay" placeholder="Enter day" data-ng-model="event.times.end.date.day" />
 				</div>
 				<div class="col-md-2">
-					<input type="number" min="0" max="23" class="form-control" id="endHours" placeholder="Enter hours" data-ng-model="event.times.end.time.hours">
+					<input type="number" min="0" max="23" class="form-control" id="endHours" placeholder="Enter hours" data-ng-model="event.times.end.time.hours" />
 				</div>
 				<div class="col-md-2">
-					<input type="number" min="0" max="59" step="5" class="form-control" id="endMinutes" placeholder="Enter minutes"  data-ng-model="event.times.end.time.minutes">
+					<input type="number" min="0" max="59" step="5" class="form-control" id="endMinutes" placeholder="Enter minutes"  data-ng-model="event.times.end.time.minutes" />
 				</div>
 			</div>
 			<div class="form-group">
 				<label for="maxGuests">Maximal amount of Guests:</label>
-				<input type="number" class="form-control" min="0" id="maxGuests" placeholder="Enter maximal amount of Guests" data-ng-model="event.maximalAmoutOfGuests">
+				<input type="number" class="form-control" min="0" id="maxGuests" placeholder="Enter maximal amount of Guests" data-ng-model="event.maximalAmoutOfGuests" />
 			</div>
 			<button type="submit"  data-ng-click="add(event)"  class="btn btn-default">Add Event</button>
 			<a href="#/events" role="button" class="btn btn-default">Back</a>
 		</form>
+		<br />
 	</div>
 </body>
 </html>
